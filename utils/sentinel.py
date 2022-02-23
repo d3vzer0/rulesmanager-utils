@@ -21,6 +21,7 @@ class Sentinel:
                     'content': yaml_object,
                     'platform': 'sentinel'
                 }
+                
                 if 'relevantTechniques' in yaml_object and yaml_object['relevantTechniques']:
                     rule_data['techniques'] = yaml_object['relevantTechniques']
                 yield rule_data

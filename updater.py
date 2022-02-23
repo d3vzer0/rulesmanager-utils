@@ -1,5 +1,4 @@
 from utils.attck import import_attck
-from utils.techniques import import_techniques
 from utils.products import import_products
 from utils.sentinel import import_sentinel
 from utils.sigma import import_sigma
@@ -34,6 +33,7 @@ def sentinel(api_url: str, path: str = typer.Option('../Azure-Sentinel/Detection
     typer.echo(f'Started import of Sentinel rules')
     asyncio.run(import_sentinel(api_url=api_url, path=path))
     typer.echo(f'Finished import of Sentinel rules')
+
 # @app.command()
 # def techniques(api_url: str, path: str = typer.Option('./mitre/techniques'),
 #     access_token: str = typer.Option(..., prompt=True, hide_input=True, envvar="RT_TOKEN")):
